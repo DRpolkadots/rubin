@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroTech Smart Greenhouse</title>
+
+<style>
+
+/* GENERAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#eef6ee;
+color:#333;
+}
+
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+color:#0f5c2f;
+margin-bottom:50px;
+}
+
+/* NAVBAR */
+
+nav{
+background:#0f5c2f;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav h1{
+color:white;
+font-size:24px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.hero-btn{
+padding:14px 30px;
+background:#1fa34a;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+position:relative;
+cursor:pointer;
+overflow:hidden;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+/* ICON */
+
+.service-icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* HIDDEN INFO */
+
+.service-info{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+background:#0f5c2f;
+color:white;
+padding:20px;
+transform:translateY(100%);
+transition:0.4s;
+font-size:14px;
+}
+
+/* SHOW INFO WHEN HOVER */
+
+.service-card:hover .service-info{
+transform:translateY(0);
+}
+
+/* COMPONENTS */
+
+.components{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.component-card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 12px rgba(0,0,0,0.1);
+}
+
+.component-card h3{
+color:#0f5c2f;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+background:#0f5c2f;
+color:white;
+text-align:center;
+padding:70px 10%;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#09391c;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1>AgroTech Greenhouse</h1>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#components">Components</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="hero-content">
+
+<h1>Smart Environmental Control</h1>
+
+<p>Where Technology Meets Nature</p>
+
+<a href="#services" class="hero-btn">Explore Services</a>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">🌱</div>
+<h3>Greenhouse Automation</h3>
+<p>Smart greenhouse automation system.</p>
+
+<div class="service-info">
+This system installs sensors and controllers that automatically manage irrigation, temperature, and ventilation.
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">💧</div>
+<h3>Soil Moisture Irrigation</h3>
+<p>Automatic watering system.</p>
+
+<div class="service-info">
+Soil moisture sensors detect when the soil becomes dry and automatically activate the water pump.
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🌡</div>
+<h3>Temperature Monitoring</h3>
+<p>Temperature control using sensors.</p>
+
+<div class="service-info">
+DHT11 sensors measure temperature and activate fans if the greenhouse becomes too hot.
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">☀</div>
+<h3>Light Optimization</h3>
+<p>Smart sunlight monitoring.</p>
+
+<div class="service-info">
+LDR sensors detect sunlight intensity and adjust shading systems to protect plants.
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🚰</div>
+<h3>Water Level Monitoring</h3>
+<p>Maintains irrigation water levels.</p>
+
+<div class="service-info">
+Water level sensors monitor tank levels and notify when refilling is needed.
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">🧠</div>
+<h3>Consultation & Design</h3>
+<p>Custom greenhouse systems.</p>
+
+<div class="service-info">
+We design automation systems depending on crop type, greenhouse size, and environment.
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- COMPONENTS -->
+
+<section id="components">
+
+<h2>System Components</h2>
+
+<div class="components">
+
+<div class="component-card">
+<h3>Soil Moisture Sensor</h3>
+<p>Detects soil dryness.</p>
+</div>
+
+<div class="component-card">
+<h3>DHT11 Temperature Sensor</h3>
+<p>Monitors greenhouse temperature.</p>
+</div>
+
+<div class="component-card">
+<h3>LDR Light Sensor</h3>
+<p>Measures sunlight intensity.</p>
+</div>
+
+<div class="component-card">
+<h3>Water Pump</h3>
+<p>Automatically irrigates plants.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<div class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>Email: agrotech@email.com</p>
+<p>Phone: +63 968 5411 481</p>
+
+</div>
+
+
+<footer>
+
+<p>AgroTech Smart Greenhouse © 2026</p>
+
+</footer>
+
+</body>
+</html>
